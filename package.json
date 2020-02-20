@@ -1,0 +1,30 @@
+{
+  "name": "json-satisfy",
+  "version": "1.0.0",
+  "description": "Check if 1st json is satified by the 2nd json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/slaveofcode/json-satisfy.git"
+  },
+  "keywords": [
+    "json",
+    "json",
+    "compare",
+    "json",
+    "match",
+    "json",
+    "diff",
+    "json",
+    "patch"
+  ],
+  "author": "Aditya Kresna Permana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slaveofcode/json-satisfy/issues"
+  },
+  "homepage": "https://github.com/slaveofcode/json-satisfy#readme"
+}
