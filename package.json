@@ -2,9 +2,12 @@
   "name": "json-satisfy",
   "version": "1.0.0",
   "description": "Check if 1st json is satified by the 2nd json",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ts-node/register src/**/**.test.ts",
+    "lint": "tslint --project tsconfig.json",
+    "lint:fix": "tslint --project tsconfig.json --fix",
+    "build": "npm run lint && ./build.sh"
   },
   "repository": {
     "type": "git",
@@ -26,5 +29,22 @@
   "bugs": {
     "url": "https://github.com/slaveofcode/json-satisfy/issues"
   },
-  "homepage": "https://github.com/slaveofcode/json-satisfy#readme"
+  "homepage": "https://github.com/slaveofcode/json-satisfy#readme",
+  "devDependencies": {
+    "@ef-carbon/tspm": "^2.2.5",
+    "@types/chai": "^4.2.9",
+    "@types/mocha": "^7.0.1",
+    "chai": "^4.2.0",
+    "husky": "^4.2.3",
+    "mocha": "^7.0.1",
+    "ts-node": "^8.6.2",
+    "ts-node-register": "^1.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5"
+  },
+  "files": [
+    "build/**/*"
+  ],
+  "dependencies": {}
 }
