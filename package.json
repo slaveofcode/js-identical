@@ -1,30 +1,60 @@
 {
-  "name": "json-satisfy",
+  "name": "js-identical",
   "version": "1.0.0",
-  "description": "Check if 1st json is satified by the 2nd json",
-  "main": "index.js",
+  "description": "Javascript library to check if 1st json is equal by the 2nd json",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ts-node/register src/**/**.test.ts",
+    "lint": "tslint --project tsconfig.json",
+    "lint:fix": "tslint --project tsconfig.json --fix",
+    "build": "npm run lint && ./build.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/slaveofcode/json-satisfy.git"
+    "url": "git+ssh://git@github.com/slaveofcode/js-identical.git"
   },
   "keywords": [
     "json",
-    "json",
     "compare",
-    "json",
     "match",
-    "json",
     "diff",
-    "json",
-    "patch"
+    "identical",
+    "equal",
+    "deep-equal",
+    "deep"
   ],
   "author": "Aditya Kresna Permana",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/slaveofcode/json-satisfy/issues"
+    "url": "https://github.com/slaveofcode/js-identical/issues"
   },
-  "homepage": "https://github.com/slaveofcode/json-satisfy#readme"
+  "homepage": "https://github.com/slaveofcode/js-identical#readme",
+  "devDependencies": {
+    "@ef-carbon/tspm": "^2.2.5",
+    "@types/chai": "^4.2.9",
+    "@types/mocha": "^7.0.1",
+    "@types/node": "^13.7.4",
+    "chai": "^4.2.0",
+    "husky": "^4.2.3",
+    "mocha": "^7.0.1",
+    "ts-node": "^8.6.2",
+    "ts-node-register": "^1.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5"
+  },
+  "files": [
+    "build/**/*"
+  ],
+  "dependencies": {
+    "@types/murmurhash": "0.0.1",
+    "dequal": "^1.0.0",
+    "is-subset": "^0.1.1",
+    "murmurhash": "0.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
 }

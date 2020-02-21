@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": false,
+    "baseUrl": "./src",                       /* Base directory to resolve non-absolute module names. */
+    "paths": {
+      "@lib/*": [ "lib/*" ]
+    }
+  },
+  "exclude": [
+    "src/**/*.test.ts",
+    "src/**/*.mock.ts",
+    "src/public/"
+  ]
+}
