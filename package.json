@@ -1,6 +1,6 @@
 {
   "name": "js-identical",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Javascript library to check if 1st json is equal by the 2nd json",
   "main": "build/index.js",
   "scripts": {
