@@ -4,7 +4,7 @@
     "sourceMap": false,
     "baseUrl": "./src",                       /* Base directory to resolve non-absolute module names. */
     "paths": {
-      "@pb/*": [ "lib/*" ]
+      "@lib/*": [ "lib/*" ]
     }
   },
   "exclude": [
