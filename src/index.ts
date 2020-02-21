@@ -68,7 +68,7 @@ const createFinalHash = (input: any) => {
   return tree.hash
 }
 
-export default (a: any, b: any) => {
+export const isIdentical = (a: any, b: any) => {
   if (a && b && ((Array.isArray(a) && Array.isArray(b)) || (typeof a === 'object' && typeof b === 'object')) && (a.length === b.length)) {
     return createFinalHash(a) === createFinalHash(b)
   }

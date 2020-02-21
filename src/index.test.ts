@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import compare from './index'
+import { isIdentical as compare } from './index'
 import 'mocha';
 
 describe('Compare JSON', () => {

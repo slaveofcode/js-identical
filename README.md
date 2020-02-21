@@ -11,7 +11,7 @@ A simple library to check that JS/JSON value is identical each other (Typescript
 
 ### Example
 ```
-const isIdentical = require('js-identical')
+const { isIdentical } = require('js-identical')
 
 const john1 = { name: 'John', age: 22, hobby: ['swimming', 'running', 'hiking'] }
 const john2 = { age: 22, name: 'John', hobby: ['running', 'swimming', 'hiking'] }
