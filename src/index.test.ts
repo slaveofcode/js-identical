@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { compare } from './index'
+import compare from './index'
 import 'mocha';
 
 describe('Compare JSON', () => {
@@ -685,5 +685,89 @@ describe('Compare JSON', () => {
     ]
 
     expect(compare(jsonSource, jsonDest)).to.equal(true)
+  })
+
+  it('should be able to compare 2 random index json', () => {
+    const people1 = [
+      {
+        id: 1,
+        name: 'Marry',
+        hobby: ['singing', 'drawing', 'playing'],
+        favouriteFoods:[
+          {
+            name: 'Gado gado',
+            from: 'Indonesia'
+          },
+          {
+            name: 'Rendang',
+            from: 'Indonesia'
+          },
+          {
+            name: 'Kentucky Fried Chicken',
+            from: 'USA',
+            variant: ['original', 'crispy', 'spicy']
+          }
+        ],
+        age: 12
+      },
+      {
+        id: 2,
+        hobby: ['running', 'Dancing'],
+        name: 'Rose',
+        favouriteFoods:[
+          {
+            name: 'Rendang',
+            from: 'Indonesia'
+          },
+          {
+            name: 'Salad',
+            from: 'USA'
+          }
+        ],
+        age: 14
+      }
+    ]
+
+    const people2 = [
+      {
+        id: 1,
+        name: 'Marry',
+        hobby: ['drawing', 'singing', 'playing'],
+        favouriteFoods:[
+          {
+            name: 'Rendang',
+            from: 'Indonesia'
+          },
+          {
+            name: 'Kentucky Fried Chicken',
+            from: 'USA',
+            variant: ['crispy', 'original', 'spicy']
+          },
+          {
+            from: 'Indonesia',
+            name: 'Gado gado'
+          },
+        ],
+        age: 12
+      },
+      {
+        id: 2,
+        name: 'Rose',
+        favouriteFoods:[
+          {
+            from: 'USA',
+            name: 'Salad'
+          },
+          {
+            name: 'Rendang',
+            from: 'Indonesia'
+          }
+        ],
+        age: 14,
+        hobby: ['Dancing', 'running'],
+      }
+    ]
+
+    expect(compare(people1, people2)).to.equal(true)
   })
 })

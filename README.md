@@ -13,8 +13,8 @@ A simple library to check that JS/JSON value is identical each other (Typescript
 ```
 const isIdentical = require('js-identical')
 
-const john1 = {name: 'John', age: 22, hobby: ['swimming', 'running', 'hiking']
-const john2 = {age: 22, name: 'John', hobby: ['running', 'swimming', 'hiking']
+const john1 = { name: 'John', age: 22, hobby: ['swimming', 'running', 'hiking'] }
+const john2 = { age: 22, name: 'John', hobby: ['running', 'swimming', 'hiking'] }
 
 const people1 = [
   {
@@ -46,7 +46,7 @@ const people1 = [
       {
         name: 'Rendang',
         from: 'Indonesia'
-      }
+      },
       {
         name: 'Salad',
         from: 'USA'
@@ -83,8 +83,8 @@ const people2 = [
     name: 'Rose',
     favouriteFoods:[
       {
-        from: 'USA'
-        name: 'Salad',
+        from: 'USA',
+        name: 'Salad'
       },
       {
         name: 'Rendang',
